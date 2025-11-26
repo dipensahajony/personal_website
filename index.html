@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home | Dipen Saha</title>
+  <meta name="description" content="Home page of Dipen Saha, civil & water resources engineer and coastal hydrodynamics researcher.">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+  <!-- ===== Navigation ===== -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <div class="logo">
+        <a href="index.html">Dipen<span>Saha</span></a>
+      </div>
+
+      <nav class="nav">
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">☰</button>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="research.html">Research</a></li>
+          <li><a href="publications.html">Publications</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="membership.html">Membership</a></li>
+          <li><a href="certifications.html">Certifications</a></li>
+          <li><a href="blog.html">My Blog</a></li>
+          <li><a href="album.html">My Album</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ========================================================= -->
+  <!-- ===================== HERO SECTION ======================= -->
+  <!-- ========================================================= -->
+
+  <section id="home" class="hero-section">
+
+    <!-- Background Video (only inside hero) -->
+    <div class="video-container">
+      <video autoplay muted loop playsinline id="bg-video">
+        <source src="background.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+
+    <!-- Hero Content -->
+    <div class="container hero-container">
+
+      <!-- Left: Intro Text -->
+      <div class="hero-text">
+        <p class="hero-eyebrow">Civil & Water Resources Engineer</p>
+        <h1>Hi, I’m <span>Dipen Saha</span>.</h1>
+        <p class="hero-subtitle">
+          PhD student at the University of Texas at Arlington (UTA), specializing in
+          coastal hydrodynamics, compound flooding, and nature-based solutions such as engineered reefs.
+        </p>
+      </div>
+
+      <!-- Right: Photo Card -->
+      <div class="hero-card">
+        <img src="dipen.jpg" alt="Photo of Dipen Saha" class="hero-photo">
+
+        <p class="hero-card-title">Coastal Hydrodynamics & Climate Resilience</p>
+        <p class="hero-card-text">
+          Modeling storm surge, waves, salinity, and engineered reefs to support coastal resilience and
+          protect communities and critical infrastructure.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================= -->
+  <!-- ======================= ABOUT ME ========================= -->
+  <!-- ========================================================= -->
+
+  <section class="section section-alt">
+    <div class="container">
+      <h2 class="section-title">About Me</h2>
+      <p class="section-intro">
+        I am a civil and water resources engineer focusing on process-based modeling of storm surge,
+        compound flooding, and nature-based solutions along the Texas Gulf Coast. I work extensively with
+        MIKE 21 FM, MIKE 21 SW, MIKE+, Python, and GIS to generate actionable flood and wave risk information.
+      </p>
+    </div>
+  </section>
+
+  <div class="about-actions">
+  <a href="files/CV of Dipen.pdf" class="btn-download" download>
+    <span class="icon">⬇</span> Download My CV
+  </a>
+</div>
+
+
+  
+
+  <!-- ========================================================= -->
+  <!-- ===================== SOCIAL ICONS ======================= -->
+  <!-- ========================================================= -->
+
+  <section class="social-section">
+    <div class="container social-container">
+
+      <a href="https://scholar.google.com/citations?user=TVFObMkAAAAJ&hl=en" target="_blank">
+        <img src="icons/google-scholar.png" alt="Google Scholar" class="social-icon">
+      </a>
+
+      <a href="https://www.researchgate.net/profile/Dipen-Saha?ev=hdr_xprf" target="_blank">
+        <img src="icons/researchgate.png" alt="ResearchGate" class="social-icon">
+      </a>
+
+      <a href="https://www.linkedin.com/in/dipensahajony/" target="_blank">
+        <img src="icons/linkedin.png" alt="LinkedIn" class="social-icon">
+      </a>
+
+      <a href="https://www.youtube.com/@dipensahajony" target="_blank">
+        <img src="icons/youtube.png" alt="YouTube" class="social-icon">
+      </a>
+
+      <a href="https://www.facebook.com/dipen.jony" target="_blank">
+        <img src="icons/facebook.png" alt="Facebook" class="social-icon">
+      </a>
+
+      <a href="https://www.instagram.com/dipensahajony/" target="_blank">
+        <img src="icons/instagram.png" alt="Instagram" class="social-icon">
+      </a>
+
+      <a href="https://x.com/Dpn_saha" target="_blank">
+        <img src="icons/x.png" alt="Twitter X" class="social-icon">
+      </a>
+
+    </div>
+  </section>
+
+  <!-- ========================================================= -->
+  <!-- ======================== FOOTER ========================== -->
+  <!-- ========================================================= -->
+
+  <footer class="site-footer">
+    <div class="container footer-container">
+      <p>© <span id="year"></span> Dipen Saha. All rights reserved.</p>
+      <p class="footer-small">Developed by Dipen Saha.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
