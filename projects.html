@@ -7,6 +7,7 @@
   <meta name="description" content="Research and professional projects undertaken by Dipen Saha.">
   <link rel="stylesheet" href="styles.css" />
 </head>
+
 <body>
 
   <!-- Navigation -->
@@ -19,7 +20,7 @@
           <li><a href="index.html">Home</a></li>
           <li><a href="research.html">Research</a></li>
           <li><a href="publications.html">Publications</a></li>
-          <li><a href="projects.html">Projects</a></li>
+          <li><a href="projects.html" class="active">Projects</a></li>
           <li><a href="membership.html">Membership</a></li>
           <li><a href="certifications.html">Certifications</a></li>
           <li><a href="blog.html">My Blog</a></li>
@@ -38,6 +39,7 @@
         A collection of my current and past scientific research and applied modeling projects.
       </p>
 
+      <!-- Research Project Cards -->
       <div class="grid three-col cards">
 
         <article class="card">
@@ -65,10 +67,56 @@
         </article>
 
       </div>
+
+      <!-- Bangladesh Major Projects -->
+      <h2 class="section-subtitle" style="margin-top: 3rem;">Completed Major Projects in Bangladesh</h2>
+
+      <ul class="project-list">
+        <li>Hydrological and Morphological Model Study for Integrated Water Resources Management and Development of Kutubdia and Matarbari Island.</li>
+
+        <li>Detailed Hydrological and Morphological Survey and Study for Matarbari Port Development Project (RHD Component).</li>
+
+        <li>Long-term monitoring, research, and analysis of the Bangladesh Coastal Zone.</li>
+
+        <li>Surface water hydrology study of probable site selection for construction of nuclear power plant in the southern part of Bangladesh.</li>
+
+        <li>Feasibility study for the construction of walkway, Eco-Park, and allied infrastructure on the foreshore land of the rivers Buriganga, Turag, Balu & Sitalakhya (3rd Phase), including waste removal and development planning for the Dhaka circular waterways.</li>
+
+        <li>Feasibility Study for Restoration of Bhadra and Salta River along with Adjacent Polder (25, 26, 27/1, 27/2, 28/1 & 29) to remove drainage congestion in Khulna District, including Environmental and Social Impact Assessment (ESIA).</li>
+
+        <li>Feasibility Study & Detailed Engineering Design for Long-term Drainage Solution in the Bhabodah Area (2nd Phase).</li>
+
+        <li>Hydrological and Morphological Study for Installation of 33 KV Submarine Cable from Chittagong to Sandwip under the Power Distribution System Development Project.</li>
+
+        <li>Feasibility Study for Improvement and Restoration of Navigability for Buriswar-Payra, Old Brahmaputra, Dharla, Dudhkumar, Punarbhaba, Tulai, and Showa Rivers.</li>
+
+        <li>Survey for BIWTA: Morphological Study, Design & Supervision, and EIA/SIA of Twelve Major Navigation Routes.</li>
+
+        <li>Detailed Technical Feasibility Study for Integrated Development of Jahizzer Char.</li>
+
+        <li>Coastal Embankment Improvement Project (CEIP-1).</li>
+      </ul>
+
     </div>
   </section>
 
   <!-- Footer -->
   <footer class="site-footer">
     <div class="container footer-container">
-      <p>© <span
+      <p>© <span id="year"></span> Dipen Saha. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Mobile nav toggle
+    const navToggle = document.getElementById("navToggle");
+    const navLinks = document.getElementById("navLinks");
+    navToggle.addEventListener("click", () => {
+      navLinks.classList.toggle("open");
+    });
+  </script>
+
+</body>
+</html>
