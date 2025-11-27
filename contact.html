@@ -4,15 +4,17 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contact | Dipen Saha</title>
-  <meta name="description" content="Contact information for Dipen Saha.">
+  <meta name="description" content="Contact information and message form of Dipen Saha.">
   <link rel="stylesheet" href="styles.css" />
 </head>
+
 <body>
 
   <!-- Navigation -->
   <header class="site-header">
     <div class="container nav-container">
       <div class="logo"><a href="index.html">Dipen<span>Saha</span></a></div>
+
       <nav class="nav">
         <button class="nav-toggle" id="navToggle">☰</button>
         <ul class="nav-links" id="navLinks">
@@ -24,7 +26,7 @@
           <li><a href="certifications.html">Certifications</a></li>
           <li><a href="blog.html">My Blog</a></li>
           <li><a href="album.html">My Album</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="contact.html" class="active">Contact</a></li>
         </ul>
       </nav>
     </div>
@@ -36,10 +38,11 @@
       <h1 class="section-title">Contact</h1>
       <p class="section-intro">
         For collaboration, supervision, speaking invitations, or research discussions,
-        feel free to contact me.
+        feel free to contact me using the form below.
       </p>
 
       <div class="contact-grid">
+        <!-- Left Info Panel -->
         <div>
           <ul class="contact-list">
             <li><strong>Email:</strong> <a href="mailto:dipen.saha@uta.edu">dipen.saha@uta.edu</a></li>
@@ -58,8 +61,54 @@
               <a href="#" target="_blank">View Profile</a>
             </li>
           </ul>
+
+          <!-- Location Map -->
+          <div class="map-container">
+            <h3 style="margin-bottom: 0.5rem;">Location — University of Texas at Arlington</h3>
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3346.510471385993!2d-97.12311372440851!3d32.72996387366927!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x864e7d77cb680cfb%3A0xbe2cc4b5709d74ab!2sUniversity%20of%20Texas%20at%20Arlington!5e0!3m2!1sen!2sus!4v1700678512345" 
+              width="100%" 
+              height="280" 
+              style="border:0; border-radius: 12px; margin-top: 1rem;" 
+              loading="lazy" 
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
         </div>
 
-        <form class="contact-form" onsubmit="return false;">
-          <label>
-            Name
+        <!-- Contact Form -->
+        <form class="contact-form"
+              action="https://formsubmit.co/dipen.saha@uta.edu"
+              method="POST">
+
+          <!-- FormSubmit options -->
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_next" value="https://dipensaha.github.io/thankyou.html">
+
+          <label for="name">Your Name</label>
+          <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+          <label for="email">Your Email</label>
+          <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+          <label for="message">Your Message</label>
+          <textarea id="message" name="message" placeholder="Write your message" rows="6" required></textarea>
+
+          <button type="submit" class="btn">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    // Mobile menu toggle
+    const navToggle = document.getElementById('navToggle');
+    const navLinks = document.getElementById('navLinks');
+    navToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('open');
+    });
+  </script>
+
+</body>
+</html>
