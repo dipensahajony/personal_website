@@ -27,7 +27,7 @@
           <li><a href="membership.html">Membership</a></li>
           <li><a href="certifications.html">Certifications</a></li>
           <li><a href="blog.html">My Blog</a></li>
-          <li><a href="album.html">My Album</a></li>
+          <li><a href="album.html" class="active">My Album</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
@@ -42,33 +42,128 @@
         A few snapshots from field visits, conferences, workshops, and life outside the lab.
       </p>
 
-      <!-- For now using text cards; later you can replace these with <img> thumbnails -->
-      <div class="grid three-col cards">
-        <article class="card">
-          <h3>Field Visit</h3>
-          <p>[Placeholder for a photo from a Texas coast or estuary field campaign.]</p>
-        </article>
-
-        <article class="card">
-          <h3>Conference & Talks</h3>
-          <p>[Placeholder for a photo from a conference presentation or poster session.]</p>
-        </article>
-
-        <article class="card">
-          <h3>Life & Moments</h3>
-          <p>[Placeholder for personal or family moments during your PhD journey.]</p>
-        </article>
+      <!-- Tabs -->
+      <div class="album-tabs">
+        <button class="album-tab active" data-tab="field">Field Visits</button>
+        <button class="album-tab" data-tab="conference">Conference &amp; Talks</button>
+        <button class="album-tab" data-tab="life">Life &amp; Moments</button>
       </div>
+
+      <!-- Panels -->
+
+      <!-- Field Visits Panel -->
+      <div class="album-panel active" id="tab-field">
+        <h2 class="album-heading">Field Visits</h2>
+        <p class="album-text">
+          Selected photos from hydrological and coastal field campaigns, data collection,
+          and site inspections.
+        </p>
+
+        <div class="photo-grid">
+          <!-- field-visit-1 to field-visit-26 -->
+          <div class="photo-card"><img src="files/field-visit-1.jpg" alt="Field visit photo 1" loading="lazy"></div>
+          <div class="photo-card"><img src="files/field-visit-2.jpg" alt="Field visit photo 2" loading="lazy"></div>
+          <div class="photo-card"><img src="files/field-visit-3.jpg" alt="Field visit photo 3" loading="lazy"></div>
+          <div class="photo-card"><img src="files/field-visit-4.jpg" alt="Field visit photo 4" loading="lazy"></div>
+          <div class="photo-card"><img src="files/field-visit-5.jpg" alt="Field visit photo 5" loading="lazy"></div>
+          <div class="photo-card"><img src="files/field-visit-6.jpg" alt="Field visit photo 6" loading="lazy"></div>
+          <div class="photo-card"><img src="files/field-visit-7.jpg" alt="Field visit photo 7" loading="lazy"></div>
+          <div class="photo-card"><img src="files/field-visit-8.jpg" alt="Field visit photo 8" loading="lazy"></div>
+          <div class="photo-card"><img src="files/field-visit-9.jpg" alt="Field visit photo 9" loading="lazy"></div>
+          <div class="photo-card"><img src="files/field-visit-10.jpg" alt="Field visit photo 10" loading="lazy"></div>
+          <div class="photo-card"><img src="files/field-visit-11.jpg" alt="Field visit photo 11" loading="lazy"></div>
+          <div class="photo-card"><img src="files/field-visit-12.jpg" alt="Field visit photo 12" loading="lazy"></div>
+          <div class="photo-card"><img src="files/field-visit-13.jpg" alt="Field visit photo 13" loading="lazy"></div>
+          <div class="photo-card"><img src="files/field-visit-14.jpg" alt="Field visit photo 14" loading="lazy"></div>
+          <div class="photo-card"><img src="files/field-visit-15.jpg" alt="Field visit photo 15" loading="lazy"></div>
+          <div class="photo-card"><img src="files/field-visit-16.jpg" alt="Field visit photo 16" loading="lazy"></div>
+          <div class="photo-card"><img src="files/field-visit-17.jpg" alt="Field visit photo 17" loading="lazy"></div>
+          <div class="photo-card"><img src="files/field-visit-18.jpg" alt="Field visit photo 18" loading="lazy"></div>
+          <div class="photo-card"><img src="files/field-visit-19.jpg" alt="Field visit photo 19" loading="lazy"></div>
+          <div class="photo-card"><img src="files/field-visit-20.jpg" alt="Field visit photo 20" loading="lazy"></div>
+          <div class="photo-card"><img src="files/field-visit-21.jpg" alt="Field visit photo 21" loading="lazy"></div>
+          <div class="photo-card"><img src="files/field-visit-22.jpg" alt="Field visit photo 22" loading="lazy"></div>
+          <div class="photo-card"><img src="files/field-visit-23.jpg" alt="Field visit photo 23" loading="lazy"></div>
+          <div class="photo-card"><img src="files/field-visit-24.jpg" alt="Field visit photo 24" loading="lazy"></div>
+          <div class="photo-card"><img src="files/field-visit-25.jpg" alt="Field visit photo 25" loading="lazy"></div>
+          <div class="photo-card"><img src="files/field-visit-26.jpg" alt="Field visit photo 26" loading="lazy"></div>
+        </div>
+      </div>
+
+      <!-- Conference Panel -->
+      <div class="album-panel" id="tab-conference">
+        <h2 class="album-heading">Conference &amp; Talks</h2>
+        <p class="album-text">
+          Moments from conferences, invited talks, poster sessions, and professional events.
+        </p>
+
+        <div class="photo-grid">
+          <!-- con-1 to con-7 -->
+          <div class="photo-card"><img src="files/con-1.jpg" alt="Conference photo 1" loading="lazy"></div>
+          <div class="photo-card"><img src="files/con-2.jpg" alt="Conference photo 2" loading="lazy"></div>
+          <div class="photo-card"><img src="files/con-3.jpg" alt="Conference photo 3" loading="lazy"></div>
+          <div class="photo-card"><img src="files/con-4.jpg" alt="Conference photo 4" loading="lazy"></div>
+          <div class="photo-card"><img src="files/con-5.jpg" alt="Conference photo 5" loading="lazy"></div>
+          <div class="photo-card"><img src="files/con-6.jpg" alt="Conference photo 6" loading="lazy"></div>
+          <div class="photo-card"><img src="files/con-7.jpg" alt="Conference photo 7" loading="lazy"></div>
+        </div>
+      </div>
+
+      <!-- Life Panel -->
+      <div class="album-panel" id="tab-life">
+        <h2 class="album-heading">Life &amp; Moments</h2>
+        <p class="album-text">
+          Personal snapshots, family time, and moments that keep life balanced beyond research.
+        </p>
+
+        <div class="photo-grid">
+          <!-- lm-1 to lm-6 -->
+          <div class="photo-card"><img src="files/lm-1.jpg" alt="Life and moments photo 1" loading="lazy"></div>
+          <div class="photo-card"><img src="files/lm-2.jpg" alt="Life and moments photo 2" loading="lazy"></div>
+          <div class="photo-card"><img src="files/lm-3.jpg" alt="Life and moments photo 3" loading="lazy"></div>
+          <div class="photo-card"><img src="files/lm-4.jpg" alt="Life and moments photo 4" loading="lazy"></div>
+          <div class="photo-card"><img src="files/lm-5.jpg" alt="Life and moments photo 5" loading="lazy"></div>
+          <div class="photo-card"><img src="files/lm-6.jpg" alt="Life and moments photo 6" loading="lazy"></div>
+        </div>
+      </div>
+
     </div>
   </section>
 
   <footer class="site-footer">
     <div class="container footer-container">
       <p>© <span id="year"></span> Dipen Saha. All rights reserved.</p>
-      <p class="footer-small">Built with HTML, CSS & JavaScript.</p>
+      <p class="footer-small">Built with HTML, CSS &amp; JavaScript.</p>
     </div>
   </footer>
 
   <script src="script.js"></script>
+
+  <!-- Tabs JS -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const tabButtons = document.querySelectorAll('.album-tab');
+      const panels = document.querySelectorAll('.album-panel');
+
+      tabButtons.forEach(button => {
+        button.addEventListener('click', () => {
+          // Remove active from all
+          tabButtons.forEach(b => b.classList.remove('active'));
+          panels.forEach(p => p.classList.remove('active'));
+
+          // Add active to clicked
+          button.classList.add('active');
+          const target = button.dataset.tab;
+          const panel = document.getElementById('tab-' + target);
+          if (panel) {
+            panel.classList.add('active');
+          }
+
+          // Optional: scroll to top of album section on tab change
+          // window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+      });
+    });
+  </script>
 </body>
 </html>
