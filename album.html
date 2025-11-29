@@ -289,34 +289,10 @@
   <footer class="site-footer">
     <div class="container footer-container">
       <p>© <span id="year"></span> Dipen Saha. All rights reserved.</p>
-      <p class="footer-small">Built with HTML, CSS &amp; JavaScript.</p>
+      <p class="footer-small">Developed by Dipen Saha.</p>
     </div>
   </footer>
 
   <script src="script.js"></script>
-
-  <!-- Tabs JS -->
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      const tabButtons = document.querySelectorAll('.album-tab');
-      const panels = document.querySelectorAll('.album-panel');
-
-      tabButtons.forEach(button => {
-        button.addEventListener('click', () => {
-          // Remove active from all
-          tabButtons.forEach(b => b.classList.remove('active'));
-          panels.forEach(p => p.classList.remove('active'));
-
-          // Add active to clicked
-          button.classList.add('active');
-          const target = button.dataset.tab;
-          const panel = document.getElementById('tab-' + target);
-          if (panel) {
-            panel.classList.add('active');
-          }
-        });
-      });
-    });
-  </script>
 </body>
 </html>
