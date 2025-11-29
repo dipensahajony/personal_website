@@ -13,10 +13,12 @@
   <!-- Navigation -->
   <header class="site-header">
     <div class="container nav-container">
-      <div class="logo"><a href="index.html">Dipen<span>Saha</span></a></div>
+      <div class="logo">
+        <a href="index.html">Dipen<span>Saha</span></a>
+      </div>
 
       <nav class="nav">
-        <button class="nav-toggle" id="navToggle">☰</button>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">☰</button>
         <ul class="nav-links" id="navLinks">
           <li><a href="index.html">Home</a></li>
           <li><a href="research.html">Research</a></li>
@@ -42,29 +44,45 @@
       </p>
 
       <div class="contact-grid">
-        <!-- Left Info Panel -->
+
+        <!-- LEFT INFO PANEL -->
         <div>
           <ul class="contact-list">
-            <li><strong>Email:</strong> <a href="mailto:dipen.saha@uta.edu">dipen.saha@uta.edu</a></li>
-            <li><strong>Affiliation:</strong> University of Texas at Arlington</li>
-            <li><strong>Lab:</strong> Hydroinformatics & Hydrology Innovation (H2I) Lab</li>
+            <li><strong>Email:</strong> 
+              <a href="mailto:dipen.saha@uta.edu">dipen.saha@uta.edu</a>
+            </li>
+
+            <li><strong>Affiliation:</strong> 
+              University of Texas at Arlington
+            </li>
+
+            <li><strong>Lab:</strong> 
+              Hydroinformatics & Hydrology Innovation (H2I) Lab
+            </li>
 
             <li><strong>Google Scholar:</strong>
-              <a href="#" target="_blank">View Profile</a>
+              <a href="https://scholar.google.com/citations?user=TVFObMkAAAAJ&hl=en" target="_blank">
+                View Profile
+              </a>
             </li>
 
             <li><strong>ResearchGate:</strong>
-              <a href="#" target="_blank">View Profile</a>
+              <a href="https://www.researchgate.net/profile/Dipen-Saha?ev=hdr_xprf" target="_blank">
+                View Profile
+              </a>
             </li>
 
             <li><strong>LinkedIn:</strong>
-              <a href="#" target="_blank">View Profile</a>
+              <a href="https://www.linkedin.com/in/dipensahajony/" target="_blank">
+                View Profile
+              </a>
             </li>
           </ul>
 
-          <!-- Location Map -->
+          <!-- MAP -->
           <div class="map-container">
             <h3 style="margin-bottom: 0.5rem;">Location — University of Texas at Arlington</h3>
+
             <iframe 
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3346.510471385993!2d-97.12311372440851!3d32.72996387366927!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x864e7d77cb680cfb%3A0xbe2cc4b5709d74ab!2sUniversity%20of%20Texas%20at%20Arlington!5e0!3m2!1sen!2sus!4v1700678512345" 
               width="100%" 
@@ -76,7 +94,7 @@
           </div>
         </div>
 
-        <!-- Contact Form -->
+        <!-- CONTACT FORM -->
         <form class="contact-form"
               action="https://formsubmit.co/dipen.saha@uta.edu"
               method="POST">
@@ -101,14 +119,14 @@
     </div>
   </section>
 
-  <script>
-    // Mobile menu toggle
-    const navToggle = document.getElementById('navToggle');
-    const navLinks = document.getElementById('navLinks');
-    navToggle.addEventListener('click', () => {
-      navLinks.classList.toggle('open');
-    });
-  </script>
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-container">
+      <p>© <span id="year"></span> Dipen Saha. All rights reserved.</p>
+      <p class="footer-small">Developed by Dipen Saha.</p>
+    </div>
+  </footer>
 
+  <script src="script.js"></script>
 </body>
 </html>
