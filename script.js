@@ -7,11 +7,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
   if (navToggle && navLinks) {
     navToggle.addEventListener("click", function () {
-      // Use .nav-open – matches styles.css
+      // Matches .nav-links.nav-open in styles.css
       navLinks.classList.toggle("nav-open");
     });
 
-    // Close menu when a link is clicked (good for mobile)
+    // Close menu when a link is clicked (mobile)
     navLinks.querySelectorAll("a").forEach((link) => {
       link.addEventListener("click", () => {
         navLinks.classList.remove("nav-open");
@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   // =========================
-  // 3. Membership (tabs layout, if used)
+  // 3. Membership/Cert tabs (if you ever use them)
   // =========================
   const tabButtons = document.querySelectorAll(".mc-tab-button");
   const tabPanels = document.querySelectorAll(".mc-tab-panel");
@@ -71,9 +71,7 @@ document.addEventListener("DOMContentLoaded", function () {
         btn.classList.add("active");
 
         // Show corresponding panel
-        albumPanels.forEach((panel) => {
-          panel.classList.remove("active");
-        });
+        albumPanels.forEach((panel) => panel.classList.remove("active"));
         if (targetPanel) {
           targetPanel.classList.add("active");
         }
@@ -82,24 +80,23 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   // =========================
-  // 5. Certifications slider
+  // 5. Certifications slider (auto + buttons)
   // =========================
-  const certSlides = Array.from(document.querySelectorAll(".cert-slide"));
+  const certSlides = document.querySelectorAll(".cert-slide");
   const prevCertBtn = document.getElementById("prevCert");
   const nextCertBtn = document.getElementById("nextCert");
 
   if (certSlides.length > 0 && prevCertBtn && nextCertBtn) {
     let certIndex = 0;
-    const SLIDE_INTERVAL = 2000; // 2 seconds
-    let certTimer = null;
 
     function showCertSlide(index) {
-      if (certSlides.length === 0) return;
+      const n = certSlides.length;
+      if (n === 0) return;
 
-      // Wrap around
+      // Wrap index
       if (index < 0) {
-        index = certSlides.length - 1;
-      } else if (index >= certSlides.length) {
+        index = n - 1;
+      } else if (index >= n) {
         index = 0;
       }
 
@@ -110,43 +107,15 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     }
 
-    function startCertAuto() {
-      stopCertAuto();
-      certTimer = setInterval(() => {
-        showCertSlide(certIndex + 1);
-      }, SLIDE_INTERVAL);
-    }
+    // --- Auto slideshow every 2 seconds ---
+    const SLIDE_INTERVAL = 2000; // ms
+    let certTimer = setInterval(() => {
+      showCertSlide(certIndex + 1);
+    }, SLIDE_INTERVAL);
 
-    function stopCertAuto() {
-      if (certTimer) {
-        clearInterval(certTimer);
-        certTimer = null;
-      }
-    }
-
+    // Manual controls
     function goNextCert() {
       showCertSlide(certIndex + 1);
-      startCertAuto(); // reset timer on manual click
     }
 
-    function goPrevCert() {
-      showCertSlide(certIndex - 1);
-      startCertAuto(); // reset timer on manual click
-    }
-
-    // Initial setup
-    showCertSlide(certIndex);
-    startCertAuto();
-
-    // Button events
-    nextCertBtn.addEventListener("click", goNextCert);
-    prevCertBtn.addEventListener("click", goPrevCert);
-
-    // (Optional) pause on hover
-    const slider = document.querySelector(".cert-slider");
-    if (slider) {
-      slider.addEventListener("mouseenter", stopCertAuto);
-      slider.addEventListener("mouseleave", startCertAuto);
-    }
-  }
-});
+    function goPrevCert()
