@@ -154,7 +154,7 @@ body {
 }
 
 .hero-subtitle {
-  color:black;
+  color: black;
   font-size: 0.98rem;
   max-width: 34rem;
   margin-bottom: 1.5rem;
@@ -165,6 +165,7 @@ body {
   flex-wrap: wrap;
   gap: 0.75rem;
 }
+
 /* ===== True Halo / Glow Without Changing Text Color ===== */
 .hero-section h1,
 .hero-section h1 span,
@@ -458,6 +459,7 @@ body {
   }
 }
 
+/* Mobile nav + hero spacing */
 @media (max-width: 720px) {
   .nav-toggle {
     display: block;
@@ -476,7 +478,7 @@ body {
     display: none;
   }
 
-  .nav-links.show {
+  .nav-links.nav-open {
     display: flex;
   }
 
@@ -570,7 +572,6 @@ body {
   margin: 0 auto 0.75rem;  /* center the image */
 }
 
-
 .membership-caption {
   font-size: 1rem;
   font-weight: 600;
@@ -604,7 +605,6 @@ body {
   margin: 0 auto;
   overflow: hidden;
   border-radius: 0.75rem;
-   
 }
 
 .cert-slide {
@@ -624,7 +624,6 @@ body {
 }
 
 /* Arrows overlay */
-
 .cert-arrow {
   position: absolute;
   top: 50%;
@@ -695,7 +694,8 @@ body {
   font-size: 1.2rem;
   line-height: 1;
 }
-/* ===== Contact Page Layout ===== */
+
+/* ===== Contact Page Layout ===== (extended) */
 
 .contact-grid {
   display: grid;
@@ -710,8 +710,6 @@ body {
     grid-template-columns: 1fr;
   }
 }
-
-/* Left info list */
 
 .contact-list {
   list-style: none;
@@ -732,8 +730,6 @@ body {
 .contact-list a:hover {
   text-decoration: underline;
 }
-
-/* Contact form styling */
 
 .contact-form {
   background: var(--bg-alt);
@@ -782,6 +778,7 @@ body {
   transform: translateY(-1px);
   box-shadow: var(--shadow-soft);
 }
+
 .map-container {
   margin-top: 2rem;
 }
@@ -793,6 +790,7 @@ body {
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-soft);
 }
+
 /* ===== Album Tabs & Panels ===== */
 
 .album-tabs {
@@ -873,32 +871,3 @@ body {
     height: 190px;
   }
 }
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 1.5rem;
-}
-
-/* Hide nav links and show hamburger on small screens */
-@media (max-width: 768px) {
-  .nav-toggle {
-    display: block;
-  }
-
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 60px; /* adjust for your header height */
-    right: 1rem;
-    background: #ffffff;
-    padding: 1rem;
-    border-radius: 0.75rem;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-  }
-
-  .nav-links.nav-open {
-    display: flex;
-  }
-}
-
