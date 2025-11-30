@@ -530,6 +530,7 @@ body {
   justify-content: center;
   align-items: center;
   gap: 4.5rem;
+  flex-wrap: wrap;         /* allow icons to wrap onto new lines */
 }
 
 .social-icon {
@@ -544,6 +545,19 @@ body {
   transform: scale(1.15);
   filter: brightness(120%);
 }
+
+/* Make icons smaller & tighter on mobile */
+@media (max-width: 600px) {
+  .social-container {
+    gap: 1.5rem;
+  }
+
+  .social-icon {
+    width: 48px;
+    height: 48px;
+  }
+}
+
 
 /* ===== Membership Grid (3 logos row) ===== */
 .membership-grid {
@@ -871,3 +885,4 @@ body {
     height: 190px;
   }
 }
+
