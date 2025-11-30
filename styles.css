@@ -154,7 +154,7 @@ body {
 }
 
 .hero-subtitle {
-  color: black;
+  color: pink;
   font-size: 0.98rem;
   max-width: 34rem;
   margin-bottom: 1.5rem;
@@ -885,4 +885,5 @@ body {
     height: 190px;
   }
 }
+
 
